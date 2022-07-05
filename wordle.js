@@ -1,7 +1,6 @@
 const tileDisplay = document.querySelector('.tile-container');
 const keyboard = document.querySelector('.key-container');
 const messageDisplay = document.querySelector('.message-container');
-const wordle = 'SUPER';
 
 const keys = [
     'Q',
@@ -33,6 +32,42 @@ const keys = [
     'M',
     '<<',
 ];
+
+const words = [
+    'ADAPT',
+    'BELOW',
+    'CHART',
+    'DELVE',
+    'EXIST',
+    'FRANK',
+    'GLIDE',
+    'HAPPY',
+    'INEPT',
+    'JAZZY',
+    'KEBAB',
+    'LEMON',
+    'MOUTH',
+    'NIGHT',
+    'OFTEN',
+    'PRINT',
+    'QUEEN',
+    'RIGHT',
+    'STINK',
+    'TRUST',
+    'UNCUT',
+    'VENTS',
+    'WORTH',
+    'XENON',
+    'YACHT',
+    'ZEBRA',
+];
+
+const wordSelector = function() {
+    var index = Math.floor(Math.random() * 26)
+    return words[index];
+};
+
+const wordle = wordSelector();
 
 const guessRows = [
     ['','','','','',],
